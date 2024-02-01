@@ -39,7 +39,7 @@ body {
 	padding: 14px 24px; 
 	background-color: var(--color-brown200);
 	color: var(--color-white);
-	font-size: 1.125rem;
+	font-size: 1rem;
 	border-radius: .25rem;
 	border: 2px solid var(--color-brown200);
 	transition: .2s;
@@ -133,8 +133,17 @@ body {
 	border: 2px solid var(--color-gray70);
 }
 
-.application--button {
+.application--fildset {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
 
+.application--button {
+	font-size: 1.125rem;
 }
 
 .application--peronal-data {
@@ -142,6 +151,37 @@ body {
 	font-size: .75rem;
 	color: var(--color-gray200);
 }
+
+.application--input-choise {
+	position: absolute;
+	z-index: -23;
+}
+
+.application--lable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.application__icon {
+	width: 40px;
+	height: 40px;
+
+}
+
+.application--lable:hover {
+	fill: var(--color-brown100);
+}
+
+.application__icon:focus{
+	fill: green;
+}
+
+
 
 
 .application--link {

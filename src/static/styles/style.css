@@ -7,9 +7,6 @@
 	padding-bottom: 25px;
 }
 
-.header--logo {
-}
-
 .header--icon {
 	max-height: 50px;
 }
@@ -24,9 +21,6 @@
 	justify-items: end;
 	justify-self: end;
 	gap: 10px 0;
-}
-
-.header--adress {
 }
 
 .header--link {
@@ -85,10 +79,6 @@
 	background-color: #180d089a;
 }
 
-.hero--wrapper {
-
-}
-
 .hero--title {
 	font-weight: 500;
 	font-size: 54px;
@@ -101,14 +91,8 @@
 	margin-top: 40px;
 }
 
-.hero--item {
-}
-
 .hero--text {
 	font-size: 24px;
 	color: #D3D3D3;
-}
-
-.hero--application {
 }
 
