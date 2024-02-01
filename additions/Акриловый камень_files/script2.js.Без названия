@@ -1,0 +1,330 @@
+$(document).on('mse2_load', function(e, data) {
+   filterVendorCollection()
+});
+ $(".show_worktags").on("click", function() {
+          $(".worktags").show();
+          $(this).hide();
+          return false;
+      })
+      
+function filterVendorCollection(){
+    $colfilter = $('.mse2filter_collection_filter')
+    
+    
+     var params = mSearch2.Hash.get();
+      console.log(params)
+    if (params['tv|vendorcat'] == undefined && params['collection'] == undefined) {
+           $colfilter.hide();
+       }  
+    else{
+        count = 0;
+        $colfilter.find('label').each(function(){
+            if($(this).hasClass('disabled')){
+                $(this).hide()
+            }
+            else{
+                count++
+                $(this).show()
+            }
+        })
+        if(count){
+            $colfilter.show();
+        }
+        else{
+             $colfilter.hide();
+        }
+        
+    }
+
+}
+
+$(".custom-select").each(function() {
+    var classes = $(this).attr("class"),
+        id      = $(this).attr("id"),
+        name    = $(this).attr("name");
+    var template =  '<div class="' + classes + '">';
+        template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+        template += '<div class="custom-options">';
+        $(this).find("option").each(function() {
+          template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+        });
+    template += '</div></div>';
+    
+    $(this).wrap('<div class="custom-select-wrapper"></div>');
+    $(this).hide();
+    $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function() {
+    $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+    $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function() {
+    $('html').one('click',function() {
+      $(".custom-select").removeClass("opened");
+    });
+    $(this).parents(".custom-select").toggleClass("opened");
+    event.stopPropagation();
+  });
+  $(".custom-option").on("click", function() {
+      $csv = $(this).parents(".custom-select-wrapper").parent();
+      if(!$csv.hasClass('notrigger')){
+       
+     
+    
+    $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value")).trigger('change');
+      }
+
+    $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+    $(this).addClass("selection");
+    $(this).parents(".custom-select").removeClass("opened");
+    $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
+
+// $('.custom-clear').on('click', function(){
+//   $(".custom-select").each(function() {
+//     var txt =  $(this).attr("placeholder");
+//     $(this).removeClass("opened");
+//     $(this).find(".custom-select-trigger").text(txt);
+//      $(this).parents(".custom-select-wrapper").find("select").val('');
+//   })
+// })
+
+
+
+  $(".custom-select2").each(function() {
+    var classes = $(this).attr("class"),
+        id      = $(this).attr("id"),
+        name    = $(this).attr("name");
+    var template =  '<div class="' + classes + '">';
+        template += '<span class="custom-select-trigger2">' + $(this).attr("placeholder") + '</span>';
+        template += '<div class="custom-options2">';
+        $(this).find("option").each(function() {
+          template += '<span class="custom-option2 ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+        });
+    template += '</div></div>';
+    
+    $(this).wrap('<div class="custom-select-wrapper2"></div>');
+    $(this).hide();
+    $(this).after(template);
+  });
+  $(".custom-option2:first-of-type").hover(function() {
+    $(this).parents(".custom-options2").addClass("option-hover");
+  }, function() {
+    $(this).parents(".custom-options2").removeClass("option-hover");
+  });
+  $(".custom-select-trigger2").on("click", function() {
+    $('html').one('click',function() {
+      $(".custom-select2").removeClass("opened");
+    });
+    $(this).parents(".custom-select2").toggleClass("opened");
+    event.stopPropagation();
+  });
+  $(".custom-option2").on("click", function() {
+    $(this).parents(".custom-select-wrapper2").find("select").val($(this).data("value")).trigger('select');
+    $(this).parents(".custom-options2").find(".custom-option2").removeClass("selection");
+    $(this).addClass("selection");
+    $(this).parents(".custom-select2").removeClass("opened");
+    $(this).parents(".custom-select2").find(".custom-select-trigger2").text($(this).text());
+  });
+
+
+
+  $(function () {
+      
+      
+      
+    
+    	if($('.catalog__content-filter-cont').length) {
+    	   // console.log(123);
+    	    
+		$('.catalog__content-filter-cont .form').each(function() {
+			var items = $('label', $(this)).length;
+
+			if(items < 5) {
+				$('.js-toggle-filterelements', $(this)).hide();
+			}
+		});
+	}
+	$('.js-toggle-filterelements').click(function(e){
+	   // console.log(213132);
+		e.preventDefault();
+
+		var parent = $(this).parent();
+
+		if(parent.hasClass('all')){
+			$(this).text('Показать все')
+		} else{
+			$(this).text('Скрыть')
+		}
+
+		parent.toggleClass('all');
+
+	    
+	    
+	    return false;
+	})
+      
+      
+      
+    var min = +$("#amount0").val();
+    var max = +$("#amount1").val();
+    $("#slider-range").slider({
+      range: true,
+      min: min,
+      max: max,
+      values: [min,max],
+      change: function (event, ui) {
+          $("#amount0").trigger('change');
+      },
+      slide: function (event, ui) {
+        // console.log(ui.values[0])
+        $("#amount0").val(ui.values[0]);
+      
+        $("#amount1").val(ui.values[1]);
+      }
+    });
+  
+    $("#amount0").val($("#slider-range").slider("values", 0));
+    $("#amount1").val($("#slider-range").slider("values", 1));
+  }); 
+
+
+  $(function () {
+      
+      filterVendorCollection();
+      
+        var min = +$("#amountmob0").val();
+    var max = +$("#amountmob1").val();
+    $("#slider-range2").slider({
+      range: true,
+      min: min,
+      max: max,
+      values: [min,max],
+            change: function (event, ui) {
+          $("#amount0").trigger('change');
+      },
+      slide: function (event, ui) {
+        $("#amount0").val(ui.values[0]);
+        $("#amount1").val(ui.values[1]);
+        $("#amountmob0").val(ui.values[0]);
+        $("#amountmob1").val(ui.values[1]);
+      }
+    });
+  
+    $("#amountmob0").val($("#slider-range2").slider("values", 0));
+    $("#amountmob1").val($("#slider-range2").slider("values", 1));
+  });
+
+
+  window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#searchBtn').addEventListener('click', function () {
+        document.querySelector('#search').classList.add('is-open')    
+    })
+})
+
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#searchBtn').addEventListener('click', function () {
+  
+          if(document.querySelector("#mse2_form").classList.contains("is-open")) {
+          document.querySelector("#mse2_form").submit()
+        }
+        document.querySelector('#mse2_form').classList.add('is-open')    
+
+    })
+})
+
+
+document.addEventListener("click", function(e) {
+let target = e.target;
+if (!target.closest(".header__second-level-nav-container")) {
+document.querySelectorAll(".input-search").forEach(el => {
+    el.classList.remove("is-open");
+})
+document.querySelectorAll(".header__form-search").forEach(el => {
+    el.classList.remove("is-open");
+})
+}
+})
+
+
+
+if($('.tab').length) {
+  var currentTab = 0; 
+  showTab(currentTab); 
+
+  function showTab(n) {
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block"; 
+    if (n == 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == (x.length - 1)) {
+      document.getElementById("nextBtn").innerHTML = "Следующий шаг";
+      document.getElementById("nextBtn").disabled = true;
+    } else {
+      document.getElementById("nextBtn").innerHTML = "Следующий шаг";
+      document.getElementById("nextBtn").disabled = false;
+    }
+    fixStepIndicator(n)
+  }
+}
+
+function nextPrev(n) {
+  var x = document.getElementsByClassName("tab");
+  if (n == 1 && !validateForm()) return false;
+  x[currentTab].style.display = "none";
+  currentTab = currentTab + n;
+  if (currentTab >= x.length) {
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  showTab(currentTab);
+}
+
+function validateForm() {
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].querySelectorAll("input");
+  
+  console.log(y.required)
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
+      valid = false;
+    }
+  }
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid;
+}
+
+function fixStepIndicator(n) {
+  var pag = document.querySelector(".slider-5-pagination")
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+    
+  }
+  x[n].className += " active";
+  pag.innerHTML = `${x[n].innerHTML} из ${x.length}`;
+  
+}
+
+$(document).ready(function(e) {
+  $('.uk-offcanvas-bar .uk-parent > a').on('click', function(e) {
+    if($(this).parent().hasClass('uk-open')) {
+      var url = $(this).attr('href');
+      document.location.href = url;
+    }
+  });
+});
+
+
+$('.article-2__list-item').on("click", function() {
+  $('.article-2__list-item').removeClass('active')
+  $(this).addClass('active')
+});

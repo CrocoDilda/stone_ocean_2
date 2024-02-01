@@ -1,0 +1,16 @@
+$(document).ready(function() {
+ $(document).on('click', '.custom-options .custom-option', function(){
+      	value = $(this).data('value')
+	// sort_by = value[0];
+	// sort_dir = value[1];
+ //      sort = sort_by+':'+sort_dir;
+ console.log(value);
+      mse2Config.sort =  value;
+    //   console.log(mse2Config.sort)
+   
+     setTimeout(() => mSearch2.submit(), 500);
+    //   mSearch2.submit();
+  });
+});
+
+
