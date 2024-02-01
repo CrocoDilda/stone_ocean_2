@@ -1,19 +1,75 @@
-.hero {
+.header {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-auto-flow: column;
+	align-items: center;
+	margin-top: 36px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.header--logo {
+}
+
+.header--icon {
+	max-height: 50px;
+}
+
+.header--text {
+	justify-self: center;
+	max-width: 65%;
+}
+
+.header--inner {
+	display: grid;
+	justify-items: end;
+	justify-self: end;
+	gap: 10px 0;
+}
+
+.header--adress {
+}
+
+.header--link {
 	position: relative;
-	width: 100vw;
-	height: 90vh;
+	font-size: 1.5rem;
+	color: var(--color-gray);
 }
 
-.hero__background {
+.header--link::before {
+	content: '';
+	top: 110%;
+	left: 0;
 	position: absolute;
-	height: 100%;
-	width: 100%;
-	background-color: #00000080;
+	height: 3px;
+	width: 0%;
+	border-radius: 3px;
+	background-color: var(--color-brown);
+	transition: .2s;
 }
 
-.hero__image {
+.header--link:hover::before {
+	width: 100%;
+}
+
+.hero {
+	position: relative;
+	display: grid;
+	align-items: center;
+	grid-auto-flow: column;
+	grid-template-columns: 1fr 1fr;
+	height: 75vh;
+}
+
+.hero--background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 75vh;
+	z-index: -1;
+}
+
+.hero--image {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -21,91 +77,38 @@
 	z-index: -2;
 }
 
-.hero__wrapper {
-	position: relative;
-	display: grid;
-	gap: 30px 0;
-	align-self: center;
-	justify-self: end;
-	justify-items: start;
-	z-index: 1;
+.hero--filter {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-color: #180d089a;
 }
 
-.hero__title {
-	font-family: "Roboto";
-	text-transform: uppercase;
-	font-size: 3rem;
+.hero--wrapper {
+
+}
+
+.hero--title {
 	font-weight: 500;
-	color: white;
+	font-size: 54px;
+	color: #D3D3D3;
 }
 
-.hero__span {
-	color: var(--color-yellow)
-}
-
-.hero__text {
-	font-family: "Roboto";
-	font-size: 1.125rem;
-	color: white;
-	font-weight: 300;
-}
-
-.hero__button {
-}
-
-.advantages {
-
-}
-
-.advantages__title {
-	text-align: center;
-	color: var(--color-gold200);
-}
-
-.advantages__subtitle {
-	font-weight: 500;
-	font-size: 1.25rem;
-	color: black;
-	margin-top: 30px;
-	text-align: center;
-}
-
-.advantages__wrapper {
+.hero--description {
 	display: grid;
-	grid-auto-flow: column;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	gap: 40px;
-	margin-top: 100px;
+	gap: 25px 0;
+	margin-top: 40px;
 }
 
-.advantages__wrapper_work {
-	grid-template-columns: repeat(2, 1fr);
+.hero--item {
 }
 
-.advantages__wrapper_work .advantages__item {
-	max-width: 450px;
-	justify-self: center;
+.hero--text {
+	font-size: 24px;
+	color: #D3D3D3;
 }
 
-.advantages__item {
-	display: grid;
-	grid-template-rows: 60px auto 1fr;
-	justify-items: center;
-	align-items: start;
-	gap: 20px 0;
+.hero--application {
 }
 
-.advantages__image {
-	height: 60px;
-}
-
-.advantages__card-titel {
-	font-weight: 600;
-	font-size: 1.25rem;
-	color: var(--color-gold200);
-}
-
-.advantages__card-text {
-	text-align: center;
-}

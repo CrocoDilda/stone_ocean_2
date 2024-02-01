@@ -1,5 +1,9 @@
 const wrapper = document.querySelector('[data-wrapper]')
 const ListItem = document.querySelector('[data-item]')
+const number = document.querySelector('[data-number]')
+
+
+
 
 wrapper.addEventListener('mouseover', (event) => {
 	const item = +event.target.atributeList.contains('[data-item]')
@@ -17,3 +21,5 @@ function passHoverPattern (num) {
 		<button class="gallery__more button">Показать ещё</button>
 	</div>`
 }
+
+
