@@ -75,15 +75,13 @@
 				<li class="hero--item">
 					<p class="hero--text">-Ремонт и обслуживание</p>
 				</li>
-				<li class="hero--item">
-					<p class="hero--text">-Нестандартные заказы</p>
-				</li>
 			</ul>
 		</div>
 		<div class="application">
 			<h2 class="application--title">Оставить заявку на сайте <br> <span class="application--title_span">для получения бесплатной консультации</span></h2>
 			<form name="pupu" action="#" class="application--form">
 				<label class="application--description" for="name">Введите имя</label>
+				<!-- autofocus вставить в тег ниже -->
 				<input class="application--input" 
 				type="text" 
 				id="name" 
@@ -91,7 +89,7 @@
 				placeholder="Введите имя" 
 				required 
 				value="фывафыва"
-				autofocus 
+				
 				pattern="[а-яА-Я]+">
 				<label class="application--description" for="call">Введите номер</label>
 				<input data-number class="application--input" 
@@ -105,26 +103,26 @@
 				minLength="11"
 				maxLength="12">
 				<fieldset class="application--fildset">
-					<input class="application--input-choise" id="tg" type="radio" name="radioButton">
+					<input data-inputAtr="0" class="application--input-choise" id="tg" type="radio" name="radioButton">
 					<label class="application--lable" for="tg">			
 						<svg class="application__icon tg">
 							<use xlink:href="../static/icons/footer/sprite.svg#telegram"></use>
 						</svg>
 					</label>
-					<input class="application--input-choise" id="wt" type="radio" name="radioButton">
+					<input data-inputAtr="1" class="application--input-choise" id="wt" type="radio" name="radioButton">
 					<label class="application--lable" for="wt">			
 						<svg class="application__icon tg">
 							<use xlink:href="../static/icons/footer/sprite.svg#whatsapp"></use>
 						</svg>
 					</label>
-					<input class="application--input-choise" id="telephone" type="radio" name="radioButton">
-					<label class="application--lable" for="telephone">			
+					<input data-inputAtr="2" class="application--input-choise" id="telephone" type="radio" name="radioButton">
+					<label  class="application--lable" for="telephone">			
 						<svg class="application__icon tg">
 							<use xlink:href="../static/icons/footer/sprite.svg#telephone"></use>
 						</svg>
 					</label>
 				</fieldset>
-				<button data-button class="application--button button" type="submit">Отправить</button>
+				<input data-button id="send" class="application--button button" value="Отправить" type="submit">
 				<p class="application--peronal-data">Нажимая на кнопку, Вы принимаете<a href="" class="application--link"> Положение и Согласие </a>на обработку персональных данных.</p>
 			</form>
 		</div>
@@ -133,7 +131,46 @@
 
 		</div>
 	</section>
+	<section class="service container">
+		<h2 class="service--title title">Выберите подходящую услугу</h2>
+		<ul class="services--wrapper">
+			<li class="services--card">
+				<img src="../static/images/gallery/photo-23.webp" alt="" class="services--image">
+				<div class="services--inner">
+					<h3 class="services--naming title-2">Изготовление кухонных столешниц</h3>
+					<p class="services--description">Предметы интерьера, которые сделаны из дерева, являются благоприятными для каждого человека, чего не скажешь про искусственные материалы.</p>
+					<button class="services--button button">Заказать услугу</button>
+				</div>
+			</li>
+			<li class="services--card">
+				<img src="../static/images/gallery/photo-29.webp" alt="" class="services--image">
+				<div class="services--inner">
+					<h3 class="services--naming title-2 ">Изготовление подоконников</h3>
+					<p class="services--description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque qui velit ducimus animi ipsam asdfsad laudantium non similique exercitationem dignissimos blanditiis!</p>
+					<button class="services--button button">Заказать услугу</button>
+				</div>
+			</li>
+			<li class="services--card">
+				<img src="../static/images/gallery/photo-30.webp" alt="" class="services--image">
+				<div class="services--inner">
+					<h3 class="services--naming title-2">Оборудование ванной комнаты</h3>
+					<p class="services--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam cupiditate vel velit tempore id.</p>
+					<button class="services--button button">Заказать услугу</button>
+				</div>
+			</li>
+			<li class="services--card">
+				<img src="../static/images/gallery/photo-31.webp" alt="" class="services--image">
+				<div class="services--inner">
+					<h3 class="services--naming title-2">Ремонт и обслуживание</h3>
+					<p class="services--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, in?</p>
+					<button class="services--button button">Заказать услугу</button>
+				</div>
+			</li>
+		</ul>
+	</section>
 	</main>
-	<script src="../static/scripts/script.js"></script>
+	<script src="../static/scripts/script.js">
+
+	</script>
 </body>
 </html>

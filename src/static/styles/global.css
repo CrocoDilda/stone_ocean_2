@@ -1,7 +1,9 @@
 :root {
 	--color-white: #F9FAFB;
+	--color-gray30: #F2F2F2;
 	--color-gray50: #E2E2E2;
 	--color-gray70: #8f8f8f;
+	--color-gray90: #444444;
 	--color-gray100: #424242;
 	--color-gray200: #333333;
 	--color-gray300: #20242F;
@@ -26,6 +28,18 @@ body {
 	width: 100vw;
 	padding-left: calc(50vw - var(--container)/2);
 	padding-right: calc(50vw - var(--container)/2);
+}
+
+.title {
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: var(--color-gray100);
+}
+
+.title-2 {
+	font-size: 1.75rem;
+	font-weight: 500;
+	color: var(--color-gray100);
 }
 
 .text {
@@ -180,9 +194,6 @@ body {
 .application__icon:focus{
 	fill: green;
 }
-
-
-
 
 .application--link {
 }

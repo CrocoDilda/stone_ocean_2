@@ -34,15 +34,55 @@
 // const button = document.querySelector("[data-button]")
 
 
-const mainForm = document.forms.pupu
 
-const mainFormInput = mainForm.user
-const mainFormTextarea = mainForm.tel
+// const mainForm = document.forms.pupu
 
-mainForm.addEventListener("submit", ()=> {
-	alert(mainFormInput.value + '    ' + mainFormTextarea.value)
-})
+// const inputRadio = document.querySelector('[data-inputAtr]')
+
+// console.log(inputRadio.target)
+
+// const mainFormInput = mainForm.user
+// const mainFormTextarea = mainForm.tel
+// const inputRadioBtn = mainForm.radioButton
+
+// mainForm.addEventListener("submit", ()=> {
+// 	console.log(inputRadioBtn[0].checked)
+// 	console.log(inputRadioBtn[1].checked)
+// 	console.log(inputRadioBtn[2].checked)
+// 	alert(mainFormInput.value + '    ' + mainFormTextarea.value)
+// })
 
 
 // console.log(mainFormInput.value)
 // console.log(mainFormTextarea.value)
+
+
+
+// function sendEmail() {
+
+
+// var name = document.getElementsByName("user")[0].value;
+
+
+// var email = document.getElementsByName("tel")[0].value;
+
+
+// // const message = document.getElementsByName("message")[0].value;
+
+
+// var subject = "Новое сообщение от Stone Ocean"
+
+
+// var body = "Имя: " + name + " ";
+// body += "Email: " + email + " ";
+// body += "Сообщение:" + message;
+// return window.open("mailto:misano4955@giratex.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body))
+// console.log(body)
+// alert()
+// }
+
+let buttonInp = document.querySelector("#send")
+buttonInp.onclick = function (event) {
+	event.preventDefault ()
+	console.log('wwwww')
+}
