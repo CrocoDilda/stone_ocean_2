@@ -1,6 +1,7 @@
 :root {
 	--color-white: #F9FAFB;
-	--color-gray30: #F2F2F2;
+	--color-white100: #F2F2F2;
+	--color-white200: #d8d9db;
 	--color-gray50: #E2E2E2;
 	--color-gray70: #8f8f8f;
 	--color-gray90: #444444;
@@ -9,6 +10,7 @@
 	--color-gray300: #20242F;
 	--color-brown: #9f887e;
 	--color-brown100: #82614F;
+	--color-brown150: #765447;
 	--color-brown200: #644331;
 	--color-brown300: #462f23;
 
@@ -31,9 +33,21 @@ body {
 }
 
 .title {
+	position: relative;
 	font-size: 2.5rem;
 	font-weight: 500;
 	color: var(--color-gray100);
+}
+
+.title::before {
+	content: '';
+	position: absolute;
+	top: 200%;
+	left: 0;
+	height: 3px;
+	width: 100px;
+	border-radius: 3px;
+	background-color: var(--color-brown);
 }
 
 .title-2 {
@@ -69,6 +83,14 @@ body {
 	background-color: transparent;
 }
 
+.button__fixed {
+	position: sticky;
+    top: 93vh;
+    left: 90vw;
+    margin: 100px 20px -40px 0;
+    z-index: 100;
+}
+
 .header-fix {
 	background-color: white;
 	box-shadow: 0 1px 4px 0 #ccc;
@@ -95,10 +117,27 @@ body {
 }
 
 .header-fix--text {
+	position: relative;
 	font-size: 1.125rem;
 	color: var(--color-gray200);
 	text-align: center;
 	font-weight: 300;
+}
+
+.header-fix--text::after {
+	content: '';
+	top: 100%;
+	left: 0;
+	position: absolute;
+	height: 3px;
+	width: 0%;
+	border-radius: 3px;
+	background-color: var(--color-brown);
+	transition: .2s;
+}
+
+.header-fix--text:hover::after {
+	width: 100%;
 }
 
 .application {

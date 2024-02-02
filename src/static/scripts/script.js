@@ -81,8 +81,17 @@
 // alert()
 // }
 
-let buttonInp = document.querySelector("#send")
+let form = document.querySelector('pupu');
+const userName = document.querySelector('#name')
+const userNumber = document.querySelector('#call')
+const buttonInp = document.querySelector("#send")
+console.log(serialize('pupu'))
+
+
 buttonInp.onclick = function (event) {
 	event.preventDefault ()
-	console.log('wwwww')
+	console.log(userName.value)
+	console.log(userNumber.value)
 }
+
+
