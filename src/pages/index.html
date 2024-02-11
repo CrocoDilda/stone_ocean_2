@@ -10,74 +10,10 @@
 	<link rel="shortcut icon" href="../static/icons/logo.svg">
 	<title>Stone Ocean</title>
 </head>
-<body>
-	<header class="header-fix container">
-		<nav class="header-fix--nav">
-			<ul class="header-fix--wrapper">
-				<li class="header-fix--item">
-					<a href="#" class="header-fix--link">
-						<p class="header-fix--text">Услуги</p>
-					</a>
-				</li>
-				<li class="header-fix--item">
-					<a href="#" class="header-fix--link">
-						<p class="header-fix--text">Почему мы</p>
-					</a>
-				</li>
-				<li class="header-fix--item">
-					<a href="#" class="header-fix--link">
-						<p class="header-fix--text">Примеры работ</p>
-					</a>
-				</li>
-				<li class="header-fix--item">
-					<a href="#" class="header-fix--link">
-						<p class="header-fix--text">Отзывы</p>
-					</a>
-				</li>
-				<li class="header-fix--item">
-					<a href="#" class="header-fix--link">
-						<p class="header-fix--text">Контакты</p>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section class="header container">
-			<a href="" class="header--logo">
-				<img src="../static/icons/small-logo.svg" alt="Stone Ocean" class="header--icon">
-			</a>
-			<p class="header--text text">Высококачественные изделия из акрилового камня в Краснодаре и Краснодарском крае</p>
-			<address class="header--inner text">
-				<a href="tel:+79123456789" class="header--link">+79123456789</a>
-				<a href="mailto:webmaster@somedomain.com" class="header--link">stone_ocean@gmail.com</a>
-				<p class="header--adress">г.Краснодар, ул.Сормовкая 10</p>
-			</address>
-	</section>
-	<section class="hero container">
-		<div class="hero--background">
-			<img src="../static/images/background.webp" alt="" class="hero--image">
-			<div class="hero--filter"></div>
-		</div>
-		<div class="hero--wrapper">
-			<h1 class="hero--title">Быстрое и качественное
-				оказание услуг</h1>
-			<ul class="hero--description">
-				<li class="hero--item">
-					<p class="hero--text">-Кухни</p>
-				</li>
-				<li class="hero--item">
-					<p class="hero--text">-Подоконники</p>
-				</li>
-				<li class="hero--item">
-					<p class="hero--text">-Ванные комнаты</p>
-				</li>
-				<li class="hero--item">
-					<p class="hero--text">-Ремонт и обслуживание</p>
-				</li>
-			</ul>
-		</div>
+<body data-body class="body">
+	<div data-hidden class="block_hidden"> 
 		<div class="application">
+			<button data-closedBtn class="application--button_close">X</button>
 			<h2 class="application--title">Оставить заявку на сайте <br> <span class="application--title_span">для получения бесплатной консультации</span></h2>
 			<form name="pupu" action="#" class="application--form">
 				<label class="application--description" for="name">Введите имя</label>
@@ -105,19 +41,19 @@
 				<fieldset class="application--fildset">
 					<input data-inputAtr="0" class="application--input-choise" id="tg" type="radio" name="radioButton">
 					<label class="application--lable" for="tg">			
-						<svg class="application__icon tg">
+						<svg class="application--icon tg">
 							<use xlink:href="../static/icons/sprite-social-network.svg#telegram"></use>
 						</svg>
 					</label>
 					<input data-inputAtr="1" class="application--input-choise" id="wt" type="radio" name="radioButton">
 					<label class="application--lable" for="wt">			
-						<svg class="application__icon tg">
+						<svg class="application--icon wa">
 							<use xlink:href="../static/icons/sprite-social-network.svg#whatsapp"></use>
 						</svg>
 					</label>
 					<input data-inputAtr="2" class="application--input-choise" id="telephone" type="radio" name="radioButton">
 					<label  class="application--lable" for="telephone">			
-						<svg class="application__icon tg">
+						<svg class="application--icon tel">
 							<use xlink:href="../static/icons/sprite-social-network.svg#telephone"></use>
 						</svg>
 					</label>
@@ -126,84 +62,329 @@
 				<p class="application--peronal-data">Нажимая на кнопку, Вы принимаете<a href="" class="application--link"> Положение и Согласие </a>на обработку персональных данных.</p>
 			</form>
 		</div>
-	</section>
-	<button class="button__fixed button">Закажите звонок</button>
-	<section class="service container">
-		<h2 class="service--title title">Выберите подходящую услугу</h2>
-		<ul class="services--wrapper">
-			<li class="services--card">
-				<img src="../static/images/gallery/photo-23.webp" alt="" class="services--image">
-				<div class="services--inner">
-					<h3 class="services--naming title-2">Изготовление кухонных столешниц</h3>
-					<p class="services--description">Предметы интерьера, которые сделаны из дерева, являются благоприятными для каждого человека, чего не скажешь про искусственные материалы.</p>
-					<button class="services--button button">Заказать услугу</button>
-				</div>
-			</li>
-			<li class="services--card">
-				<img src="../static/images/gallery/photo-29.webp" alt="" class="services--image">
-				<div class="services--inner">
-					<h3 class="services--naming title-2 ">Изготовление подоконников</h3>
-					<p class="services--description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque qui velit ducimus animi ipsam asdfsad laudantium non similique exercitationem dignissimos blanditiis!</p>
-					<button class="services--button button">Заказать услугу</button>
-				</div>
-			</li>
-			<li class="services--card">
-				<img src="../static/images/gallery/photo-30.webp" alt="" class="services--image">
-				<div class="services--inner">
-					<h3 class="services--naming title-2">Оборудование ванной комнаты</h3>
-					<p class="services--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam cupiditate vel velit tempore id.</p>
-					<button class="services--button button">Заказать услугу</button>
-				</div>
-			</li>
-			<li class="services--card">
-				<img src="../static/images/gallery/photo-31.webp" alt="" class="services--image">
-				<div class="services--inner">
-					<h3 class="services--naming title-2">Ремонт и обслуживание</h3>
-					<p class="services--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, in?</p>
-					<button class="services--button button">Заказать услугу</button>
-				</div>
-			</li>
-		</ul>
-	</section>
-	<section class="advantages container">
-		<h2 class="advantages--title title">Почему с нами удобно работать</h2>
-		<div class="advantages--wrapper">
-			<p class="advantages--description title-2">Мастера с богатым опытом и знанием дела</p>
-			<ul class="advantages--list">
-				<li class="advantages--item">
-					<svg class="advantages__icon">
-						<use xlink:href="../static/icons/sprite-advantages.svg#manufacture"></use>
-					</svg>
-					<h3 class="advantages--name title-2">СОБСТВЕННОЕ ПРОИЗВОДСТВО</h3>
-					<p class="advantages--text">Мы сами производим изделия, а не занимаемся перепродажей уже готовых изделий. Поэтому мы устанавливаем приемлемую стоимость и гарантируем высокое качество продукции</p>
+	</div>
+	<header class="header-fix container">
+		<nav class="header-fix--nav">
+			<ul class="header-fix--wrapper">
+				<li class="header-fix--item">
+					<button data-services-btn class="header-fix--link">
+						<p class="header-fix--text">Услуги</p>
+					</button>
 				</li>
-				<li class="advantages--item">
-					<svg class="advantages__icon">
-						<use xlink:href="../static/icons/sprite-advantages.svg#guarantee"></use>
-					</svg>
-					<h3 class="advantages--name title-2">ОБСЛУЖИВАНИЕ</h3>
-					<p class="advantages--text">Бесплатное обслуживание изделий в течении года, а по прошествию этого срока мы предоставляем скидки на шлифовку - полировку и ремонт для наших клиентов</p>
+				<li class="header-fix--item">
+					<button data-advantages-btn class="header-fix--link">
+						<p class="header-fix--text">Почему мы</p>
+					</button>
 				</li>
-				<li class="advantages--item">
-					<svg class="advantages__icon">
-						<use xlink:href="../static/icons/sprite-advantages.svg#money"></use>
-					</svg>
-					<h3 class="advantages--name title-2">НИКАКИХ ДОПЛАТ</h3>
-					<p class="advantages--text">Любые элементы и доработки при заказе изделия из камня – БЕСПЛАТНО. Не нужно будет ничего доплачивать за бесшовное соединение, обработку кромок и т. д.</p>
+				<li class="header-fix--item">
+					<button data-gallery-btn class="header-fix--link">
+						<p class="header-fix--text">Примеры работ</p>
+					</button>
 				</li>
-				<li class="advantages--item">
-					<svg class="advantages__icon">
-						<use xlink:href="../static/icons/sprite-advantages.svg#speed"></use>
-					</svg>
-					<h3 class="advantages--name title-2">ОТ ЗАКАЗА ДО УСТАНОВКИ ОТ 5 ДО 10 РАБОЧИХ ДНЕЙ</h3>
-					<p class="advantages--text">Мы сами изготавливаем для Вас изделие, а также сами его привозим и устанавливаем. Отсутствие посредников позволяет нам существенно сократить сроки исполнения заказа</p>
+				<!-- <li class="header-fix--item">
+					<button class="header-fix--link">
+						<p class="header-fix--text">Отзывы</p>
+					</button>
+				</li> -->
+				<li class="header-fix--item">
+					<button data-contacts-btn class="header-fix--link">
+						<p class="header-fix--text">Контакты</p>
+					</button>
 				</li>
 			</ul>
-		</div>
-	</section>
+		</nav>
+	</header>
+	<main>
+		<section class="header container">
+			<a href="" class="header--logo">
+				<img src="../static/icons/small-logo.svg" alt="Stone Ocean" class="header--icon">
+			</a>
+			<p class="header--text text">Высококачественные изделия из акрилового камня в Краснодаре и Краснодарском крае</p>
+			<address class="header--inner text">
+				<a href="tel:+79123456789" class="header--link">+79123456789</a>
+				<a href="mailto:webmaster@somedomain.com" class="header--link">stone_ocean@gmail.com</a>
+				<p class="header--adress">г.Краснодар, ул.Сормовкая 10</p>
+			</address>
+		</section>
+		<section class="hero container">
+			<div class="hero--background">
+				<img src="../static/images/background.webp" alt="" class="hero--image">
+				<div class="hero--filter"></div>
+			</div>
+			<div class="hero--wrapper">
+				<h1 class="hero--title">Быстрое и качественное
+					оказание услуг</h1>
+				<ul class="hero--description">
+					<li class="hero--item">
+						<p class="hero--text">-Кухни</p>
+					</li>
+					<li class="hero--item">
+						<p class="hero--text">-Подоконники</p>
+					</li>
+					<li class="hero--item">
+						<p class="hero--text">-Ванные комнаты</p>
+					</li>
+					<li class="hero--item">
+						<p class="hero--text">-Ремонт и обслуживание</p>
+					</li>
+				</ul>
+			</div>
+			<div class="application hero--application">
+				<h2 class="application--title">Оставить заявку на сайте <br> <span class="application--title_span">для получения бесплатной консультации</span></h2>
+				<form name="pupu" action="#" class="application--form">
+					<label class="application--description" for="name">Введите имя</label>
+					<!-- autofocus вставить в тег ниже -->
+					<input class="application--input" 
+					type="text" 
+					id="name" 
+					name="user"
+					placeholder="Введите имя" 
+					required 
+					value="Дилдабрек"
+					
+					pattern="[а-яА-Я]+">
+					<label class="application--description" for="call">Введите номер</label>
+					<input data-number class="application--input" 
+					type="number" 
+					id="call" 
+					name="tel" 
+					inputmode="tel" 
+					placeholder="+7 XXX XXX XX XX" 
+					required 
+					minLength="10" 
+					minLength="11"
+					maxLength="12">
+					<fieldset class="application--fildset">
+						<input data-inputAtr="0" class="application--input-choise" id="tg" type="radio" name="radioButton">
+						<label class="application--lable" for="tg">			
+							<svg class="application--icon tg">
+								<use xlink:href="../static/icons/sprite-social-network.svg#telegram"></use>
+							</svg>
+						</label>
+						<input data-inputAtr="1" class="application--input-choise" id="wt" type="radio" name="radioButton">
+						<label class="application--lable" for="wt">			
+							<svg class="application--icon wa">
+								<use xlink:href="../static/icons/sprite-social-network.svg#whatsapp"></use>
+							</svg>
+						</label>
+						<input data-inputAtr="2" class="application--input-choise" id="telephone" type="radio" name="radioButton">
+						<label  class="application--lable" for="telephone">			
+							<svg class="application--icon tel">
+								<use xlink:href="../static/icons/sprite-social-network.svg#telephone"></use>
+							</svg>
+						</label>
+					</fieldset>
+					<input data-button id="send" class="application--button button" value="Отправить" type="submit">
+					<p class="application--peronal-data">Нажимая на кнопку, Вы принимаете<a href="" class="application--link"> Положение и Согласие </a>на обработку персональных данных.</p>
+				</form>
+			</div>
+		</section>
+		<button data-hiddenBtn class="button--fixed button">Закажите звонок</button>
+		<section data-services class="service container">
+			<h2 class="service--title title">Выберите подходящую услугу</h2>
+			<ul class="services--wrapper">
+				<li class="services--card">
+					<img src="../static/images/gallery/photo-23.webp" alt="" class="services--image">
+					<div class="services--inner">
+						<h3 class="services--naming title-2">Оборудование кухонь</h3>
+						<p class="services--description">Изготовление и установка столешниц, моек, стеновых панелей, барных стоек и многое другое</p>
+						<button data-hiddenBtn class="services--button button">Заказать услугу</button>
+					</div>
+				</li>
+				<li class="services--card">
+					<img src="../static/images/gallery/photo-17.webp" alt="" class="services--image">
+					<div class="services--inner">
+						<h3 class="services--naming title-2 ">Изготовление подоконников</h3>
+						<p class="services--description">Подоконники любых форм и размеров, а же совмещённые с кухонными столешницами</p>
+						<button data-hiddenBtn class="services--button button">Заказать услугу</button>
+					</div>
+				</li>
+				<li class="services--card">
+					<img src="../static/images/gallery/photo-30.webp" alt="" class="services--image">
+					<div class="services--inner">
+						<h3 class="services--naming title-2">Оборудование ванной комнаты</h3>
+						<p class="services--description">Установка акриловой мебели, облицовка стен и ванных, изготовление поддонов для ванной комнаты</p>
+						<button data-hiddenBtn class="services--button button">Заказать услугу</button>
+					</div>
+				</li>
+				<li class="services--card">
+					<img src="../static/images/gallery/photo-31.webp" alt="" class="services--image">
+					<div class="services--inner">
+						<h3 class="services--naming title-2">Ремонт и обслуживание</h3>
+						<p class="services--description">Ремонт любой сложности, реставрация, полировка установленных изделий</p>
+						<button data-hiddenBtn class="services--button button">Заказать услугу</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section data-advantages class="advantages container">
+			<h2 class="advantages--title title">Почему с нами удобно работать</h2>
+			<div class="advantages--wrapper">
+				<p class="advantages--description title-2">Мастера с богатым опытом и знанием дела</p>
+				<ul class="advantages--list">
+					<li class="advantages--item">
+						<svg class="advantages--icon">
+							<use xlink:href="../static/icons/sprite-advantages.svg#manufacture"></use>
+						</svg>
+						<h3 class="advantages--name title-2">СОБСТВЕННОЕ ПРОИЗВОДСТВО</h3>
+						<p class="advantages--text">Мы сами производим изделия, а не занимаемся перепродажей уже готовых изделий. Поэтому мы устанавливаем приемлемую стоимость и гарантируем высокое качество продукции</p>
+					</li>
+					<li class="advantages--item">
+						<svg class="advantages--icon">
+							<use xlink:href="../static/icons/sprite-advantages.svg#guarantee"></use>
+						</svg>
+						<h3 class="advantages--name title-2">ОБСЛУЖИВАНИЕ</h3>
+						<p class="advantages--text">Бесплатное обслуживание изделий в течении года, а по прошествию этого срока мы предоставляем скидки на шлифовку - полировку и ремонт для наших клиентов</p>
+					</li>
+					<li class="advantages--item">
+						<svg class="advantages--icon">
+							<use xlink:href="../static/icons/sprite-advantages.svg#money"></use>
+						</svg>
+						<h3 class="advantages--name title-2">НИКАКИХ ДОПЛАТ</h3>
+						<p class="advantages--text">Любые элементы и доработки при заказе изделия из камня – БЕСПЛАТНО. Не нужно будет ничего доплачивать за бесшовное соединение, обработку кромок и т. д.</p>
+					</li>
+					<li class="advantages--item">
+						<svg class="advantages--icon">
+							<use xlink:href="../static/icons/sprite-advantages.svg#speed"></use>
+						</svg>
+						<h3 class="advantages--name title-2">ОТ ЗАКАЗА ДО УСТАНОВКИ ОТ 5 ДО 10 РАБОЧИХ ДНЕЙ</h3>
+						<p class="advantages--text">Мы сами изготавливаем для Вас изделие, а также сами его привозим и устанавливаем. Отсутствие посредников позволяет нам существенно сократить сроки исполнения заказа</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section data-gallery class="gallery">
+			<h2 class="title title_center">Выполненные работы</h2>
+			<ul class="gallery--wrapper">
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-6.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-7.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-25.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-16.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-19.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-21.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-22.webp" alt="" class="gallery--image">
+				</li>
+				<li class="gallery--item">
+					<img src="../static/images/gallery/photo-24.webp" alt="" class="gallery--image">
+				</li>
+			</ul>
+		</section>
+		<section class="history container">
+			<h2 class="title">Акриловый искусственный камень</h2>
+			<p class="history--text text">
+				Изобрел искусственный акриловый камень  концерн Du Pont в 1962 году. <br><br>
+				Сначала он задумывался как материал для искусственных костей, но стал известен благодаря кухонным столешницам. В 1981 году срок патента Du Pont истек, и началось развитие искусственных камней под разными марками, такими как Corian, Hi-Macs, Staron и многие другие.
+				<br><br>
+				Производство искусственного камня является сложным и трудоемким процессом, который требует применения разнообразных технологий.
+				<br><br>
+				По составу искусственный камень представляет собой композитный материал, включающий в себя минеральный наполнитель, цветовые пигменты и акриловую смолу, очищенную от примесей и являющуюся связующим элементом. От качества акриловой смолы зависит качество всего продукта. <br> <br>
+				В структуре акрилового камня отсутствуют микроскопические поры, которые характерны для натуральных материалов. Благодаря этому имеет высокие эксплуатационные и гигиенические свойства. Поверхность легко чистится, непроницаема для бактерий. Это свойство делает искусственный акриловый камень незаменимым материалом для использования в медицинских учреждениях и местах общественного питания. Отсутствие микропор в материале дает возможность изготовления из него изделий, постоянно контактирующих с водой, компонентов мебели для ванных комнат.</p>
+		</section>
+		<section class="work container">
+			<h2 class="title title_center">Как мы работаем</h2>
+			<ul class="work--wrapper">
+				<li class="work--item">
+					<svg class="work--icon">
+						<use xlink:href="../static/icons/sprite-work.svg#dialog"></use>
+					</svg>
+					<h3 class="work--title title-2">Оформление заявки</h3>
+					<p class="work--text text">Вы оставляете заявку на сайте с помощью формы</p>
+				</li>
+				<li class="work--item">
+					<svg class="work--icon">
+						<use xlink:href="../static/icons/sprite-work.svg#call-center"></use>
+					</svg>
+					<h3 class="work--title title-2">Обсуждение деталей</h3>
+					<p class="work--text text">После получения заявки мы свяжемся с вами для обсуждения деталей дальнейшей работы</p>
+				</li>
+				<li class="work--item">
+					<svg class="work--icon">
+						<use xlink:href="../static/icons/sprite-work.svg#roulette"></use>
+					</svg>
+					<h3 class="work--title title-2">Вызов замерщика</h3>
+					<p class="work--text text">После обсуждения необходимых деталей мы отправляем специалиста для замера</p>
+				</li>
+				<li class="work--item">
+					<svg class="work--icon">
+						<use xlink:href="../static/icons/sprite-work.svg#manufacture"></use>
+					</svg>
+					<h3 class="work--title title-2">Изготовление заказа</h3>
+					<p class="work--text text">По сделанному замеру будет изготовлено ваше изделие</p>
+				</li>
+				<li class="work--item">
+					<svg class="work--icon">
+						<use xlink:href="../static/icons/sprite-work.svg#builder"></use>
+					</svg>
+					<h3 class="work--title title-2">Монтаж</h3>
+					<p class="work--text text">Наши мастера приедут и бесплатно установят ваше изделие</p>
+				</li>
+			</ul>
+		</section>
+		<section class="discount container">
+			<h2 class="discount--title">Оставьте заявку прямо сейчас и получите в подарок комплект кухонных разделочных досок из акрилового камня</h2>
+			<button data-hiddenBtn class="discount--button button">Оставить заявку</button>
+		</section>
 	</main>
-	<script src="../static/scripts/script.js">
-	</script>
-
+	<footer data-contacts class="footer container">	
+		<a href="#" class="footer__logo">
+			<img src="../static/icons/small-logo_white.svg" alt="" class="footer__logo">
+		</a>
+		<ul class="footer__contacts">
+			<li class="footer__social-network">
+				<a href="#" class="footer__link">
+				<svg class="footer__icon tg">
+					<use xlink:href="../static/icons/sprite-social-network.svg#telegram_footer"></use>
+				</svg>
+			</a>
+			</li>
+			<li class="footer__social-network">
+				<a href="#" class="footer__link">
+					<svg class="footer__icon vk">
+						<use xlink:href="../static/icons/sprite-social-network.svg#vk"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="footer__social-network">
+				<a href="#" class="footer__link">
+					<svg class="footer__icon wa">
+						<use xlink:href="../static/icons/sprite-social-network.svg#whatsapp"></use>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<nav class="footer__nav">
+			<ul class="footer__list">
+				<li class="footer__item">
+					<a href="#" class="footer__link">
+						<p class="footer__text">Сотрудничество</p>
+					</a>
+				</li>
+				<li class="footer__item">
+					<a href="tel:+79123456789" class="footer__link">
+						<p class="footer__text">+7 912 345 67 89</p>
+					</a>
+				</li>
+				<li class="footer__item">
+					<a href="mailto:webmaster@somedomain.com" class="footer__link">
+						<p class="footer__text">info@mail.com</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+	<script src="../static/scripts/script.js"></script>
 </body>
 </html>
