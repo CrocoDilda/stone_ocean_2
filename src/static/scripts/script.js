@@ -1,22 +1,25 @@
-const hiddenBlock = document.querySelector('[data-hidden]')
+const stubForm = document.querySelector('[data-stub]')
+const workingForm = document.querySelector('[data-working]')
 const hiddenButton = document.querySelectorAll('[data-hiddenButton]')
+const background = document.querySelectorAll('[data-background]')
 const closedButton = document.querySelector('[data-closedButton]')
 const body = document.querySelector('body')
-const inputs = document.querySelectorAll('input')
 
 
-hiddenBlock.style.transition = '.2s'
+
 hiddenButton.forEach(element => {
 	element.addEventListener('click', () => {
+		stubForm.classList.remove('application--stub')
+		workingForm.classList.add('application--working')
+		background[0].classList.add('application--background')
 		body.style.overflowY = 'hidden'
-		hiddenBlock.className = 'absolute'
 	})
-});
-
-closedButton.addEventListener('click', () => {
-	hiddenBlock.className = 'block_hidden'
-	body.style.overflowY = 'scroll'
 })
 
-console.dir()
-document.forms[1].name.placeholder = 'adsf'
+closedButton.addEventListener('click', () => {
+	stubForm.classList.add('application--stub')
+	workingForm.classList.remove('application--working')
+	background[0].classList.remove('application--background')
+	body.style.overflowY = ''
+})
+
